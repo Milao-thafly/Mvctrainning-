@@ -1,0 +1,107 @@
+@media screen and (min-width: 850px) {
+  .TGRANDMORT {
+    background-color: rgba(21, 77, 113, 0.6509803922);
+    width: 100%;
+  }
+  .metLaCouleur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 77, 113, 0.6509803922);
+    width: 100%;
+    height: 380px;
+  }
+  .Vatuer {
+    background-color: rgba(249, 246, 243, 0.3490196078);
+    height: 229px;
+    width: 750px;
+  }
+  .gneugneutuer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .gneugneutuerui {
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .HOOOOOSTOP {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .Btn_de_salopard {
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .btnOffer {
+    align-items: center;
+    border: none;
+    height: 33px;
+    width: 172px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .homepageCentral {
+    width: 100%;
+  }
+  .TGRANDMORT {
+    background-color: rgba(21, 77, 113, 0.6509803922);
+    width: 100%;
+  }
+  .metLaCouleur {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 77, 113, 0.6509803922);
+    width: 100%;
+    height: 543px;
+  }
+  .Vatuer {
+    background-color: rgba(249, 246, 243, 0.3490196078);
+    height: 443px;
+    width: 85%;
+  }
+  .gneugneutuer {
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    align-items: center;
+  }
+  .gneugneutuerui {
+    width: 65%;
+    font-size: 21px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    align-items: center;
+  }
+  .HOOOOOSTOP {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
+  }
+  .btnOffer {
+    align-items: center;
+    border: none;
+    height: 33px;
+    width: 172px;
+  }
+  .Btn_de_salopard {
+    border: none;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */
