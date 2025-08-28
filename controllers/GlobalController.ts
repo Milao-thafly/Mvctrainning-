@@ -13,7 +13,7 @@ export class GlobalController {
 
     public homepage() {
         const success = this.request.query.success;
-        const newerMission = sampleMission.filter(mission => mission.id === 1,2)
+        const newerMission = orig(mission => mission.id === 1,2)
 
 
         this.response.render("pages/home.ejs"); {
