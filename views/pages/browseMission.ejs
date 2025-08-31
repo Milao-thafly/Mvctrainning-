@@ -1,0 +1,21 @@
+<%- include("../partials/head") %>
+
+<% browseMission.forEach((sampleMission) => { %>
+                    <div class="card">
+                        <a href="/missionPage/<%= sampleMission.id %>">
+                            <h2 class="propriété_title"><%= sampleMission.title %></h2>
+                            <p class="propriété_description"><%= sampleMission.description %></p>
+                            
+                            
+                            <ul class="uls">
+                                <% if (Array.isArray(sampleMission.skills)) { %>
+                                    <% sampleMission.skills.forEach((skill) => { %>
+                                        <li class="missionSkillList">
+                                            <p class="propriété_skils"><%= skill %></p>
+                                        </li>
+                                    <% }) %>
+                                <% } %>
+                            </ul>
+                        </a>
+                    </div>
+                <% }) %>

@@ -2,8 +2,16 @@ import Express from "express";
 import router from "./routes";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
+import { GlobalController } from "./controllers/GlobalController";
+import missionRouter from './routes/missionPage';
 
 const app = Express();
+
+
+app.get("/", (req, res) => {
+  new GlobalController(req, res).homepage();
+});
+
 
 const PORT = 3000
 
@@ -20,8 +28,8 @@ app.use(Express.static(path.join(__dirname, "public")));
 
 app.use(Express.urlencoded({ extended: true }));
 
-console.log("router")
-app.use(router);
+
+app.use("/", router);
 
 app.use((req, res) => {
     res.status(404).send("Page non trouvée :::::::::::::");

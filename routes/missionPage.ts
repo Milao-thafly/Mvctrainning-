@@ -4,15 +4,21 @@ import { MissionPageController } from "../controllers/MissionPageController"
 
 const missionRouter = Router();
 
-missionRouter.get("/missionPage", (request, response) => {
+missionRouter.get("/browseMission", (request, response) => {
     const controller = new MissionPageController(request, response);
     controller.browseMissionPage();
 
 });
 
-missionRouter.get("/missionPage", (request, response) => {
+missionRouter.get("/missionPage/:id", (request, response) => {
     const controller = new MissionPageController(request, response);
     controller.readMissionPage();
+
+});
+
+missionRouter.put("/missionForm", (request, response) => {
+    const controller = new MissionPageController(request, response);
+    controller.addMissionPage();
 
 });
 

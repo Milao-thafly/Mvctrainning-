@@ -1,5 +1,6 @@
 import { Request, Response} from "express";
-import { skillOptions, typeOptions, salaryUnitOptions, sampleMission} from '../src/data/data'
+import { skillOptions, typeOptions, salaryUnitOptions, sampleMissions} from '../src/data/data'
+
 
 
 export class GlobalController {
@@ -13,12 +14,12 @@ export class GlobalController {
 
     public homepage() {
         const success = this.request.query.success;
-        const newerMission = orig(mission => mission.id === 1,2)
+        
+        
 
 
-        this.response.render("pages/home.ejs"); {
-            skillOptions: newerMission,
-        }
-
+        this.response.render("pages/home.ejs", {
+            sampleMissions
+        }); 
     }
 }

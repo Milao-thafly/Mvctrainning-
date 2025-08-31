@@ -1,31 +1,49 @@
 <%- include ("../partials/head") %>
 
-<section class ="homepageCentral">
+<section class="homepageCentral">
     <article class="TGRANDMORT">
         <div class="metLaCouleur">
             <div class="Vatuer">
                 <div class="HOOOOOSTOP">
-                <p class="gneugneutuer">Trouvez la mission qui vous correspond</p>
-                <p class="gneugneutuerui">Découvrez des annonces claires, accessibles et adaptées à vos talents. Publiez, éditez ou supprimez vos offres en toute simplicité.</p>
-                <div class="Btn_de_salopard"><button class="btnOffer">Découvrez les offres</button></div>
-                
-            </div>  
+                    <p class="gneugneutuer">Trouvez la mission qui vous correspond</p>
+                    <p class="gneugneutuerui">
+                        Découvrez des annonces claires, accessibles et adaptées à vos talents. Publiez, éditez ou supprimez vos offres en toute simplicité.
+                    </p>
+                    <div class="Btn_de_salopard">
+                        
+                        <a href="/browseMission"><button class="btnOffer">Découvrez les offres</button></a>
+                    </div>
+                </div>  
             </div>
         </div>
     </article>
+
     <article>
         <div class="LesMissions">
-
             <h2 class="les_misea_prix"> Les dernières annonces </h2>
 
             <div class="LesAnnonces">
-                <% mission.forEach((mission) => {%>
+               
+                <% sampleMissions.forEach((sampleMission) => { %>
                     <div class="card">
-                        <a href="/mission/<%= mission.id %>"><%= mission.title %></a>
-                            <%= 
+                        <a href="/missionPage/<%= sampleMission.id %>">
+                            <h2 class="propriété_title"><%= sampleMission.title %></h2>
+                            <p class="propriété_description"><%= sampleMission.description %></p>
+                            
+                            
+                            <ul class="uls">
+                                <% if (Array.isArray(sampleMission.skills)) { %>
+                                    <% sampleMission.skills.forEach((skill) => { %>
+                                        <li class="missionSkillList">
+                                            <p class="propriété_skils"><%= skill %></p>
+                                        </li>
+                                    <% }) %>
+                                <% } %>
+                            </ul>
+                        </a>
                     </div>
                 <% }) %>
-
             </div>
         </div>
     </article>
+</section>
