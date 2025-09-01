@@ -16,7 +16,7 @@ missionRouter.get("/missionPage/:id", (request, response) => {
 
 });
 
-missionRouter.put("/missionForm", (request, response) => {
+missionRouter.get("/missionForm", (request, response) => {
     const controller = new MissionPageController(request, response);
     controller.addMissionPage();
 
