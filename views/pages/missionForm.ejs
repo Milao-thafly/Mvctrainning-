@@ -2,31 +2,44 @@
 
 <section class="formClass">
   <div class="formAdd">
-    <h1>Form</h1>
+    <h1 class="titreForm">Creation d'une annonce</h1>
       <form class="form" action="/missions/add" method="POST">
         <div class="MissionPartOne">
           <label for="title">Titre</label>
           <input name="title" type="text" placeholder="Titre" required />
 
           <label for="description">Description de l'offre</label>
-          <textarea name="description" placeholder="Courte description" required></textarea>
+          <textarea class="txtFrero" name="description" placeholder="Courte description" required></textarea>
 
           <label for="skills">Talens recherché</label>
           <input name="skills" type="text" placeholder="Compétences (séparées par des virgules)" required />
         </div>
 
         <div class="MissionPartTwo">
+
+          <label for="type">Type de mission</label>
           <input name="type" type="text" placeholder="Type de contrat" required />
+          
+          <label for="start_date">Date onboarding</label>
           <input name="start_date" type="date" required />
+          
+          <label for="salary">Salaire</label>
           <input name="salary" type="number" placeholder="Salaire" required />
+          
+          <label for="salary_unit">Unité de salaire</label>
           <input name="salary_unit" type="text" placeholder="Unité de salaire" required />
+        
         </div>
 
         <div class="MissionMdp">
+
+          <label for="password">Mot de passe</label>
           <input name="password" type="password" placeholder="Mot de passe" required />
+          
+          
           <button type="submit">Ajouter la mission</button>
         </div>
-        
+
       </form>
   </div>
 </section>
